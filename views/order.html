@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div ng-controller="loginController">
+    <h1 style="color: blueviolet"><center>Food Order system</center></h1>
+    <h4 style="color: blueviolet"><center>Put your order here</center></h4>   
+    <center><a href="#!Home">Home</a>|<a href="#!order">Order</a></center>
+        <div align="center">
+            <h5 style="color: blueviolet">Choice your food</h5>
+            <select ng-options="data.item for data in foodData" ng-model="selected"></select>
+            <h5 style="color: blueviolet">Rate</h5>
+            <select ng-options="data.rate for data in foodData" ng-model="selected"></select><br/><br/>
+            <h5 style="color: blueviolet">Enter Quantity</h5>
+            <input type="number" name="quantity" ng-model="quantity"><br/><br/>
+            <button type="button" ng-click="pay()">Pay</button>
+            
+        </div>
+</div >

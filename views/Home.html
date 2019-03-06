@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div ng-controller="homeController">
+<h1 style="color: blueviolet"><center>Food Order system</center></h1>
+<h5><marquee style="color: blue">Good Food,Good Life</marquee></h5>
+
+    <center><a href="#!Home">Home</a>|<a href="#!order">Order</a></center>
+
+    <h3 style="color:blueviolet">We have:</h3>
+    Search:<input type="text" ng-model="customFilter.item"/>
+    <div>
+    <table class="w3-table w3-striped w3-bordered">
+        <tr>
+            <td>Item</td>
+             <td>Type</td>
+             <td>Rate</td>
+        </tr>
+        <tr ng-repeat="data in foodData | filter:customFilter">
+            <td><a href="/order">{{data.item}}</a></td>
+            <td>{{data.type}}</td>
+            <td>{{data.rate|currency:'Rs.'}}</td>
+        </tr>
+    </table>
+    </div>
+</div>
